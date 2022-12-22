@@ -39,18 +39,15 @@ public class BaseClass {
 		}
 		//implicit wait of 10 secs
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.navigate().to(url);
 	}
 
-	//public static void waitForVisibility(WebElement ele, long timeOut) {
 		public static void waitForVisibility(By by, long timeOut) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 	}
 	
-	//public static void waitForElementClickable(WebElement ele, long timeOut) {
 		public static void waitForElementClickable(By by, long timeOut) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
 		wait.until(ExpectedConditions.elementToBeClickable(by));
