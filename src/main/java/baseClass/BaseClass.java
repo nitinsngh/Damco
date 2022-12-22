@@ -19,7 +19,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	public static WebDriver driver;;
 
-	//@SuppressWarnings("deprecation")
+	
 	@BeforeTest
 	@Parameters({ "browser", "url" })
 	public void setup(String browser, String url) throws Exception {
