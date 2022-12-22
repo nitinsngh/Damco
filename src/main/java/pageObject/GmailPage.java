@@ -214,7 +214,6 @@ public class GmailPage extends BaseClass {
 
 	public void deleteOpenedMail() {
 		try {
-//			openMailDeleteBtn.click();
 			act.moveToElement(driver.findElement(openMailDeleteBtn)).build().perform();
 			jsExe.executeScript("arguments[0].click();", openMailDeleteBtn);
 		} catch (Exception e) {
